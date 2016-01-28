@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <title>golden ui</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+
+    <link rel="stylesheet" href="../styles/main.css">
+    </head>
+<body>
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+	<nav class="navbar navbar-default">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+
+				<i class="icon icon-arrow-down"></i>
+			</button>
+			<a class="navbar-brand" href="#">Golden UI</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bootstrap features <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/bootstrap#typography">Typography</a></li>
+						<li><a href="/bootstrap#navbars">Navbars</a></li>
+						<li><a href="/bootstrap#forms">Forms</a></li>
+						<li><a href="/bootstrap#dialogs">Dialogs</a></li>
+						<li><a href="/bootstrap#list-groups">List groups</a></li>
+						<li><a href="/bootstrap#navs">Navs</a></li>
+						<li><a href="/bootstrap#progress">Progress bars</a></li>
+						<li><a href="/bootstrap#tables">Tables</a></li>
+					</ul>
+				</li>
+				<li><a href="/features">Specific features</a></li>
+				<li><a href="#">Demo UI</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
+
+
+	<div class="text-center">
+		<div class="big-frame">
+			<h1>Golden UI features</h1>
+		</div>
+	</div>
+
+	<div class="panel">
+	<div class="panel-title">
+		<h3>Buttons</h3>
+	</div>
+	<div class="panel-body">
+
+		<h4>Default button</h4>
+
+		<div>
+			<button class="btn btn-default">The default button</button>
+			<button class="btn btn-default">A very very large default button with a lot of text</button>
+			<button class="btn btn-default">Small</button>
+		</div>
+
+
+<pre><code>&lt;button class="btn btn-default"&gt;The default button&lt;/button&gt;
+&lt;button class="btn btn-default"&gt;A very very large default button with a lot of text&lt;/button&gt;
+&lt;button class="btn btn-default"&gt;Small&lt;/button&gt;
+</code></pre>
+
+		<hr>
+
+		<h4>Primary button</h4>
+
+		<button class="btn btn-primary">The primary button</button>
+		<button class="btn btn-primary">A very very large button with a lot of text</button>
+		<button class="btn btn-primary">Small</button>
+
+<pre><code>&lt;button class="btn btn-primary"&gt;The primary button&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;A very very large button with a lot of text&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Small&lt;/button&gt;
+</code></pre>
+
+		<hr>
+
+		<h4>Round buttons</h4>
+		<h6>Without decoration</h6>
+		<button class="btn btn-round">A</button>
+		<button class="btn btn-round green">B</button>
+		<button class="btn btn-round red">C</button>
+		<button class="btn btn-round grey">D</button>
+		<button class="btn btn-round" disabled>E</button>
+
+<pre><code>&lt;button class="btn btn-round"&gt;A&lt;/button&gt;
+&lt;button class="btn btn-round green"&gt;B&lt;/button&gt;
+&lt;button class="btn btn-round red"&gt;C&lt;/button&gt;
+&lt;button class="btn btn-round grey"&gt;D&lt;/button&gt;
+&lt;button class="btn btn-round" disabled&gt;E&lt;/button&gt;
+</code></pre>
+
+		<h6>With decoration</h6>
+		<button class="btn btn-round circled">A</button>
+		<button class="btn btn-round green circled">B</button>
+		<button class="btn btn-round red circled">C</button>
+		<button class="btn btn-round grey circled">D</button>
+		<button class="btn btn-round circled" disabled>E</button>
+
+<pre><code>&lt;button class="btn btn-round circled"&gt;A&lt;/button&gt;
+&lt;button class="btn btn-round green circled"&gt;B&lt;/button&gt;
+&lt;button class="btn btn-round red circled"&gt;C&lt;/button&gt;
+&lt;button class="btn btn-round grey circled"&gt;D&lt;/button&gt;
+&lt;button class="btn btn-round circled" disabled&gt;E&lt;/button&gt;
+</code></pre>
+
+		<hr>
+
+		<h4>Button groups</h4>
+
+		<div class="btn-group">
+			<button class="btn btn-round">A</button>
+			<button class="btn btn-default">A button with a left addon</button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-default">A button with a right addon</button>
+			<button class="btn btn-round green">B</button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-round">C</button>
+			<button class="btn btn-default">A button with both addons</button>
+			<button class="btn btn-round">D</button>
+		</div>
+
+<pre><code>&lt;div class="btn-group">
+	&lt;button class="btn btn-round">A&lt;/button>
+	&lt;button class="btn btn-default">A button with a left addon&lt;/button>
+&lt;/div>
+
+&lt;div class="btn-group">
+	&lt;button class="btn btn-default">A button with a right addon&lt;/button>
+	&lt;button class="btn btn-round green">B&lt;/button>
+&lt;/div>
+
+&lt;div class="btn-group">
+	&lt;button class="btn btn-round">C&lt;/button>
+	&lt;button class="btn btn-default">A button with both addons&lt;/button>
+	&lt;button class="btn btn-round">D&lt;/button>
+&lt;/div>
+</code></pre>
+
+		<hr>
+
+		<h4>Button icons</h4>
+
+		<button class="btn btn-round circled"><i class="icon icon-plus"></i></button>
+		<button class="btn btn-round green circled"><i class="icon icon-minus"></i></button>
+		<button class="btn btn-round red circled"><i class="icon icon-search"></i></button>
+		<button class="btn btn-round grey circled"><i class="icon icon-talk"></i></button>
+		<button class="btn btn-round circled" disabled><i class="icon icon-yes"></i></button>
+		<button class="btn btn-round circled"><i class="icon icon-no"></i></button>
+		<button class="btn btn-round green circled"><i class="icon icon-arrow-left"></i></button>
+		<button class="btn btn-round red circled"><i class="icon icon-arrow-up"></i></button>
+		<button class="btn btn-round grey circled"><i class="icon icon-arrow-down"></i></button>
+		<button class="btn btn-round circled"><i class="icon icon-arrow-right"></i></button>
+
+<pre><code>&lt;button class="btn btn-round circled">&lt;i class="icon icon-plus">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round green circled">&lt;i class="icon icon-minus">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round red circled">&lt;i class="icon icon-search">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round grey circled">&lt;i class="icon icon-talk">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round circled" disabled>&lt;i class="icon icon-yes">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round circled">&lt;i class="icon icon-no">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round green circled">&lt;i class="icon icon-arrow-left">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round red circled">&lt;i class="icon icon-arrow-up">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round grey circled">&lt;i class="icon icon-arrow-down">&lt;/i>&lt;/button>
+&lt;button class="btn btn-round circled">&lt;i class="icon icon-arrow-right">&lt;/i>&lt;/button>
+</code></pre>
+
+		<hr>
+		<h4>Button lists</h4>
+
+		<div class="btn-list">
+			<li><i class="icon icon-plus"></i></li>
+		</div>
+		<div class="btn-list">
+			<li><i class="icon icon-plus"></i></li>
+			<li><i class="icon icon-plus"></i></li>
+		</div>
+		<div class="btn-list">
+			<li><i class="icon icon-plus"></i></li>
+			<li><i class="icon icon-plus"></i></li>
+			<li><i class="icon icon-plus"></i></li>
+		</div>
+<pre><code>&lt;div class="btn-list">
+	&lt;li>&lt;i class="icon icon-plus">&lt;/i>&lt;/li>
+&lt;/div>
+
+&lt;div class="btn-list">
+	&lt;li>&lt;i class="icon icon-plus">&lt;/i>&lt;/li>
+	&lt;li>&lt;i class="icon icon-plus">&lt;/i>&lt;/li>
+&lt;/div>
+
+&lt;div class="btn-list">
+	&lt;li>&lt;i class="icon icon-plus">&lt;/i>&lt;/li>
+	&lt;li>&lt;i class="icon icon-plus">&lt;/i>&lt;/li>
+	&lt;li>&lt;i class="icon icon-plus">&lt;/i>&lt;/li>
+&lt;/div>
+</code></pre>
+
+	</div>
+</div>
+
+	<div class="panel">
+	<div class="panel-title">
+		<h3>Panels</h3>
+	</div>
+	<div class="panel-body">
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+
+			<h4>Simple panel</h4>
+
+			<div class="panel">
+				<div class="panel-body">
+					Deep v cardigan church-key messenger bag hoodie pickled.
+				</div>
+			</div>
+
+<pre><code>&lt;div class="panel">
+	&lt;div class="panel-body">
+		Deep v cardigan church-key messenger bag hoodie pickled
+	&lt;/div>
+&lt;/div>
+</code></pre>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+
+			<h4>A panel with a title</h4>
+
+			<div class="panel">
+				<header class="panel-title">
+					<h3>Title</h3>
+				</header>
+				<div class="panel-body">
+					Chillwave paleo Shoreditch, twee Odd Future Etsy
+				</div>
+			</div>
+
+<pre><code>&lt;div class="panel">
+	&lt;header class="panel-title">
+		&lt;h3>Title&lt;/h3>
+	&lt;/header>
+	&lt;div class="panel-body">
+		Chillwave paleo Shoreditch, twee Odd Future Etsy
+	&lt;/div>
+&lt;/div>
+</code></pre>
+
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+			<h4>A panel with a centered title</h4>
+
+			<div class="panel">
+				<header class="panel-title center">
+					<h3>Title</h3>
+				</header>
+				<div class="panel-body">
+					Tumblr cronut. Street art sartorial Wes Anderson
+				</div>
+			</div>
+
+<pre><code>&lt;div class="panel">
+	&lt;header class="panel-title center">
+		&lt;h3>Title&lt;/h3>
+	&lt;/header>
+	&lt;div class="panel-body">
+		Tumblr cronut. Street art sartorial Wes Anderson
+	&lt;/div>
+&lt;/div>
+</code></pre>
+
+
+		</div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<h4>A panel with a button group in the title</h4>
+                <div class="panel">
+                    <header class="panel-title center">
+                        <div class="btn-group">
+							<button class="btn btn-round">A</button>
+							<h3>A title</h3>
+						</div>
+                    </header>
+                    <div class="panel-body">
+                        Neutra McSweeney's disrupt tousled. Ethical Kickstarter umami
+                    </div>
+                </div>
+
+<pre><code>&lt;div class="panel">
+	&lt;header class="panel-title center">
+		&lt;div class="btn-group">
+			&lt;button class="btn btn-round">A&lt;/button>
+			&lt;h3>A title&lt;/h3>
+		&lt;/div>
+	&lt;/header>
+	&lt;div class="panel-body">
+		Neutra McSweeney's disrupt tousled. Ethical Kickstarter umami
+	&lt;/div>
+&lt;/div>
+</code></pre>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<h4>A panel button decorations in the title</h4>
+                <div class="panel">
+                    <header class="panel-title center">
+                        <button class="btn btn-round circled"><i class="icon icon-plus"></i></button>
+                        <h3>Title</h3>
+                        <button class="btn btn-round circled"><i class="icon icon-plus"></i></button>
+                    </header>
+                    <div class="panel-body">
+                        Mlkshk bitters Helvetica, literally swag forage
+                    </div>
+                </div>
+
+<pre><code>&lt;div class="panel">
+	&lt;header class="panel-title center">
+		&lt;button class="btn btn-round circled">&lt;i class="icon icon-plus">&lt;/i>&lt;/button>
+		&lt;h3>Title&lt;/h3>
+		&lt;button class="btn btn-round circled">&lt;i class="icon icon-plus">&lt;/i>&lt;/button>
+	&lt;/header>
+	&lt;div class="panel-body">
+		Mlkshk bitters Helvetica, literally swag forage
+	&lt;/div>
+&lt;/div>
+</code></pre>
+
+
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<h4>A panel with a footer button</h4>
+                <div class="panel">
+                    <header class="panel-title center">
+                         <h3>Title</h3>
+                    </header>
+                    <div class="panel-body">
+                    	Fingerstache pop-up gluten-free vegan disrupt leggings before they sold out kogi wayfarers.
+                    </div>
+                    <footer class="panel-footer">
+                        <button class="btn btn-default">A button</button>
+                    </footer>
+                </div>
+
+<pre><code>&lt;div class="panel">
+	&lt;header class="panel-title center">
+		 &lt;h3>Title&lt;/h3>
+	&lt;/header>
+	&lt;div class="panel-body">
+		Fingerstache pop-up gluten-free vegan disrupt leggings before they sold out kogi wayfarers.
+	&lt;/div>
+	&lt;footer class="panel-footer">
+		&lt;button class="btn btn-default">A button&lt;/button>
+	&lt;/footer>
+&lt;/div>
+</code></pre>
+
+
+            </div>
+
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<h4>A panel with a right aligned footer button</h4>
+                <div class="panel">
+                    <header class="panel-title center">
+                         <h3>Title</h3>
+                    </header>
+                    <div class="panel-body">
+                    	Fingerstache pop-up gluten-free vegan disrupt leggings before they sold out kogi wayfarers.
+                    </div>
+                    <footer class="panel-footer">
+                        <button class="btn btn-default pull-right">A button</button>
+                    </footer>
+                </div>
+
+<pre><code>&lt;div class="panel">
+	&lt;header class="panel-title center">
+		 &lt;h3>Title&lt;/h3>
+	&lt;/header>
+	&lt;div class="panel-body">
+		Fingerstache pop-up gluten-free vegan disrupt leggings.
+	&lt;/div>
+	&lt;footer class="panel-footer">
+		&lt;button class="btn btn-default pull-right">A button&lt;/button>
+	&lt;/footer>
+&lt;/div>
+</code></pre>
+
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+				<h4>A panel with round footer buttons</h4>
+
+                <div class="panel">
+                    <header class="panel-title center">
+                        <h3>Title</h3>
+                    </header>
+                    <div class="panel-body">
+                        Lomo Pitchfork wolf cold-pressed jean shorts selfies.
+                    </div>
+                    <footer class="panel-footer">
+                        <button class="btn btn-round circled red pull-right"><i class="icon icon-no"></i></button>
+                        <button class="btn btn-round circled green pull-right"><i class="icon icon-yes"></i></button>
+                        <button class="btn btn-round circled "><i class="icon icon-search"></i></button>
+                    </footer>
+                </div>
+
+<pre><code>&lt;div class="panel">
+	&lt;header class="panel-title center">
+		&lt;h3>Title&lt;/h3>
+	&lt;/header>
+	&lt;div class="panel-body">
+		Lomo Pitchfork wolf cold-pressed jean shorts selfies.
+	&lt;/div>
+	&lt;footer class="panel-footer">
+		&lt;button class="btn btn-round circled red pull-right">&lt;i class="icon icon-no">&lt;/i>&lt;/button>
+		&lt;button class="btn btn-round circled green pull-right">&lt;i class="icon icon-yes">&lt;/i>&lt;/button>
+		&lt;button class="btn btn-round circled ">&lt;i class="icon icon-search">&lt;/i>&lt;/button>
+	&lt;/footer>
+&lt;/div>
+</code></pre>
+            </div>
+
+
+
+	</div>
+</div>
+
+	<div class="panel">
+	<div class="panel-title">
+		<h3>Slots</h3>
+	</div>
+	<div class="panel-body">
+
+		<div class="col-xs-12 col-sm-6">
+
+			<h4>Individual slots</h4>
+
+			<div class="slot"><img src="/images/demo/Bow10-large.PNG"></div>
+			<div class="slot"><img src="/images/demo/Bow10-large.PNG"></div>
+			<div class="slot"><img src="/images/demo/Bow10-large.PNG"></div>
+			<div class="slot"><img src="/images/demo/Bow10-large.PNG"></div>
+			<div class="clearfix"></div>
+
+
+<pre><code>&lt;div class="slot">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div>
+&lt;div class="slot">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div>
+&lt;div class="slot">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div>
+&lt;div class="slot">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div>
+&lt;div class="clearfix">&lt;/div>
+</code></pre>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<h4>A slot slider</h4>
+			<div class="slot-slider">
+                <a class="prev"></a>
+                <div class="slider">
+                     <ul>
+                        <li><img src="/images/demo/Bow10-large.PNG"></li>
+                        <li><img src="/images/demo/purse-large.png"></li>
+                        <li><img src="/images/demo/Bow10-large.PNG"></li>
+                        <li><img src="/images/demo/Bow10-large.PNG"></li>
+                        <li><img src="/images/demo/Bow10-large.PNG"></li>
+                    </ul>
+                </div>
+                <a class="next"></a>
+            </div>
+
+<pre><code>&lt;div class="slot-slider">
+	&lt;a class="prev">&lt;/a>
+	&lt;div class="slider">
+		 &lt;ul>
+			&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+			&lt;li>&lt;img src="/images/demo/purse-large.png">&lt;/li>
+			&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+			&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+			&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+		&lt;/ul>
+	&lt;/div>
+	&lt;a class="next">&lt;/a>
+&lt;/div>
+</code></pre>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+
+			<h4>Horizontal slot lists</h4>
+
+			<ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+            <ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+            <ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+
+<pre><code>&lt;ul class="slot-row">
+	&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+	&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+	&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+&lt;/ul>
+</code></pre>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6" style="height:450px;">
+
+			<h4>Vertical slot lists</h4>
+
+			<div class="pull-left">
+                <ul class="slot-col">
+                    <li><img src="/images/demo/Bow10-large.PNG"></li>
+                    <li><img src="/images/demo/Bow10-large.PNG"></li>
+                    <li><img src="/images/demo/Bow10-large.PNG"></li>
+                </ul>
+            </div>
+            <div class="pull-left">
+                <ul class="slot-col">
+                    <li><img src="/images/demo/Bow10-large.PNG"></li>
+                    <li><img src="/images/demo/Bow10-large.PNG"></li>
+                </ul>
+            </div>
+            <div class="pull-left">
+                <ul class="slot-col">
+                    <li><img src="/images/demo/Bow10-large.PNG"></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+
+<pre><code>&lt;ul class="slot-col">
+	&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+	&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+	&lt;li>&lt;img src="/images/demo/Bow10-large.PNG">&lt;/li>
+&lt;/ul>
+</code></pre>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+
+			<h4>3-column slot list</h4>
+
+            <ul class="slot-col size-3">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+            </ul>
+
+<pre><code>&lt;ul class="slot-col size-3">
+	&lt;li>1&lt;/li>
+	&lt;li>2&lt;/li>
+	&lt;li>3&lt;/li>
+	&lt;li>4&lt;/li>
+	&lt;li>5&lt;/li>
+	&lt;li>6&lt;/li>
+	&lt;li>7&lt;/li>
+	&lt;li>8&lt;/li>
+	&lt;li>9&lt;/li>
+&lt;/ul>
+</code></pre>
+
+		</div>
+
+        <div class="col-xs-12 col-sm-6">
+
+			<h4>4-column slot list</h4>
+
+			<ul class="slot-col size-4">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+            </ul>
+
+<pre><code>&lt;ul class="slot-col size-4">
+	&lt;li>1&lt;/li>
+	&lt;li>2&lt;/li>
+	&lt;li>3&lt;/li>
+	&lt;li>4&lt;/li>
+	&lt;li>5&lt;/li>
+	&lt;li>6&lt;/li>
+	&lt;li>7&lt;/li>
+	&lt;li>8&lt;/li>
+	&lt;li>9&lt;/li>
+	&lt;li>10&lt;/li>
+	&lt;li>11&lt;/li>
+	&lt;li>12&lt;/li>
+&lt;/ul>
+</code></pre>
+
+		</div>
+
+
+        <div class="col-xs-12 col-sm-6">
+			<h4>Double-size slot</h4>
+			<ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+			<div class="slot size-2"><img src="/images/demo/Bow10-large.PNG"></div>
+			<div class="clearfix"></div>
+<pre><code>&lt;div class="slot size-2">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div></code></pre>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<h4>Triple-size slot</h4>
+			<ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+
+			<div class="slot size-3"><img src="/images/demo/Bow10-large.PNG"></div>
+			<div class="clearfix"></div>
+<pre><code>&lt;div class="slot size-3">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div></code></pre>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+			<h4>Quadruple-size slot</h4>
+			<ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+
+			<div class="slot size-4"><img src="/images/demo/Bow10-large.PNG"></div>
+			<div class="clearfix"></div>
+<pre><code>&lt;div class="slot size-4">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div></code></pre>
+		</div>
+
+		<div class="clearfix"></div>
+        <h4>Slot groups</h4>
+        <div class="col-xs-12 col-sm-6">
+
+
+
+			<ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+
+			<div class="slot-group">
+                <div class="slot"><img src="/images/demo/Bow10-large.PNG"></div>
+                <div class="slot size-2">
+                    <div>disrupt leggings before</div>
+                </div>
+            </div>
+			<div class="clearfix"></div>
+<pre><code>&lt;div class="slot-group">
+	&lt;div class="slot">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div>
+	&lt;div class="slot size-2">
+		&lt;div>disrupt leggings before&lt;/div>
+	&lt;/div>
+&lt;/div></code></pre>
+
+		</div>
+        <div class="col-xs-12 col-sm-6">
+
+			<ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+
+			 <div class="slot-group">
+                <div class="slot size-3">
+                    <div>Neutra McSweeney's disrupt</div>
+                </div>
+                <div class="slot"><img src="/images/demo/Bow10-large.PNG"></div>
+            </div>
+			<div class="clearfix"></div>
+<pre><code>&lt;div class="slot-group">
+	&lt;div class="slot size-3">
+		&lt;div>Neutra McSweeney's disrupt&lt;/div>
+	&lt;/div>
+	&lt;div class="slot">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div>
+&lt;/div></code></pre>
+
+
+		</div>
+
+
+		<div class="col-xs-12 col-sm-6">
+
+			<ul class="slot-row">
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+                <li><img src="/images/demo/Bow10-large.PNG"></li>
+            </ul>
+
+			<div class="slot-group">
+                <div class="slot"><img src="/images/demo/Bow10-large.PNG"></div>
+                <div class="slot size-2">
+                    <div>Tumblr cronut. Street</div>
+                </div>
+                <div class="slot"><img src="/images/demo/Bow10-large.PNG"></div>
+            </div>
+			<div class="clearfix"></div>
+<pre><code>&lt;div class="slot-group">
+	&lt;div class="slot">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div>
+	&lt;div class="slot size-2">
+		&lt;div>Tumblr cronut. Street&lt;/div>
+	&lt;/div>
+	&lt;div class="slot">&lt;img src="/images/demo/Bow10-large.PNG">&lt;/div>
+&lt;/div></code></pre>
+
+		</div>
+
+            <div class="clearfix"></div>
+
+
+
+	</div>
+</div>
+
+	<div class="panel">
+	<div class="panel-title">
+		<h3>Scrollbars</h3>
+	</div>
+	<div class="panel-body">
+
+
+		<div class="col-xs-12 col-sm-6">
+
+			<h4>A scrollable panel</h4>
+
+			<div class="panel" style="height:300px;">
+				<header class="panel-title center">
+					<h3>A title</h3>
+				</header>
+				<div class="panel-body" data-toggle="scrollpane">
+					<h3>A title</h3>
+					<p>Kickstarter skateboard master cleanse, freegan dreamcatcher mustache viral Banksy asymmetrical gastropub keffiyeh scenester cornhole retro street art. Mustache pop-up lomo vinyl, High Life pour-over church-key twee Tumblr. Narwhal Carles bitters post-ironic trust fund sustainable, heirloom vinyl Kickstarter cold-pressed biodiesel Echo Park 90's. Craft beer chambray lumbersexual roof party Godard, lomo yr pickled. Kale chips keffiyeh typewriter, bespoke food truck quinoa American Apparel pug Neutra. Fashion axe keytar tousled flannel, mixtape hashtag organic gluten-free. Migas skateboard irony art party tofu hoodie.</p>
+					<p>Chambray keffiyeh actually, lo-fi pop-up meditation Bushwick 90's kale chips. Meditation normcore small batch stumptown irony wolf, organic readymade PBR banh mi gastropub. Tofu Wes Anderson synth DIY swag. Swag cornhole artisan dreamcatcher cray, YOLO Pitchfork mixtape keffiyeh slow-carb vegan letterpress leggings jean shorts Schlitz. Taxidermy PBR&B ethical, listicle cred letterpress dreamcatcher skateboard selvage 8-bit flannel quinoa Pitchfork lomo. Jean shorts pop-up stumptown before they sold out, Truffaut forage you probably haven't heard of them Williamsburg lomo crucifix disrupt Godard next level direct trade Brooklyn. Master cleanse heirloom cronut you probably haven't heard of them, chambray craft beer put a bird on it food truck keffiyeh VHS.</p>
+					<p>Next level Thundercats asymmetrical, fingerstache small batch slow-carb blog Wes Anderson Austin Echo Park letterpress pug High Life. Chillwave art party brunch, cornhole vinyl scenester gluten-free keytar whatever gastropub Thundercats forage. Cold-pressed tofu plaid quinoa twee, bicycle rights forage blog cornhole vinyl narwhal slow-carb meditation banh mi four loko. Williamsburg street art paleo letterpress, distillery 8-bit hashtag wayfarers stumptown +1 chambray. Pinterest try-hard health goth, tousled four dollar toast Echo Park direct trade cold-pressed tilde Neutra deep v quinoa. Pug 8-bit pop-up drinking vinegar. Lomo disrupt organic, Vice occupy art party 8-bit raw denim ugh before they sold out plaid pork belly.</p>
+				</div>
+
+			</div>
+
+<pre><code>&lt;div class="panel" style="height:300px;">
+	&lt;header class="panel-title center">
+		&lt;h3>A title&lt;/h3>
+	&lt;/header>
+	&lt;div class="panel-body" data-toggle="scrollpane">
+		&lt;h3>A title&lt;/h3>
+		&lt;p>Kickstarter ...&lt;/p>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+
+			<h4>A scrollable panel with an external scrollbar</h4>
+
+			<div class="panel external-scroll" style="height:300px;">
+				<header class="panel-title center">
+					<h3>A title</h3>
+				</header>
+				<div class="panel-body" data-toggle="scrollpane">
+					<h3>A title</h3>
+					<p>Kickstarter skateboard master cleanse, freegan dreamcatcher mustache viral Banksy asymmetrical gastropub keffiyeh scenester cornhole retro street art. Mustache pop-up lomo vinyl, High Life pour-over church-key twee Tumblr. Narwhal Carles bitters post-ironic trust fund sustainable, heirloom vinyl Kickstarter cold-pressed biodiesel Echo Park 90's. Craft beer chambray lumbersexual roof party Godard, lomo yr pickled. Kale chips keffiyeh typewriter, bespoke food truck quinoa American Apparel pug Neutra. Fashion axe keytar tousled flannel, mixtape hashtag organic gluten-free. Migas skateboard irony art party tofu hoodie.</p>
+					<p>Chambray keffiyeh actually, lo-fi pop-up meditation Bushwick 90's kale chips. Meditation normcore small batch stumptown irony wolf, organic readymade PBR banh mi gastropub. Tofu Wes Anderson synth DIY swag. Swag cornhole artisan dreamcatcher cray, YOLO Pitchfork mixtape keffiyeh slow-carb vegan letterpress leggings jean shorts Schlitz. Taxidermy PBR&B ethical, listicle cred letterpress dreamcatcher skateboard selvage 8-bit flannel quinoa Pitchfork lomo. Jean shorts pop-up stumptown before they sold out, Truffaut forage you probably haven't heard of them Williamsburg lomo crucifix disrupt Godard next level direct trade Brooklyn. Master cleanse heirloom cronut you probably haven't heard of them, chambray craft beer put a bird on it food truck keffiyeh VHS.</p>
+					<p>Next level Thundercats asymmetrical, fingerstache small batch slow-carb blog Wes Anderson Austin Echo Park letterpress pug High Life. Chillwave art party brunch, cornhole vinyl scenester gluten-free keytar whatever gastropub Thundercats forage. Cold-pressed tofu plaid quinoa twee, bicycle rights forage blog cornhole vinyl narwhal slow-carb meditation banh mi four loko. Williamsburg street art paleo letterpress, distillery 8-bit hashtag wayfarers stumptown +1 chambray. Pinterest try-hard health goth, tousled four dollar toast Echo Park direct trade cold-pressed tilde Neutra deep v quinoa. Pug 8-bit pop-up drinking vinegar. Lomo disrupt organic, Vice occupy art party 8-bit raw denim ugh before they sold out plaid pork belly.</p>
+				</div>
+
+			</div>
+<pre><code>&lt;div class="panel external-scroll" style="height:300px;">
+	&lt;header class="panel-title center">
+		&lt;h3>A title&lt;/h3>
+	&lt;/header>
+	&lt;div class="panel-body" data-toggle="scrollpane">
+		&lt;h3>A title&lt;/h3>
+		&lt;p>Kickstarter ...&lt;/p>
+	&lt;/div>
+&lt;/div>
+</code></pre>
+
+		</div>
+
+	</div>
+</div>
+
+	<div class="panel">
+	<div class="panel-title">
+		<h3>Progress bars</h3>
+	</div>
+	<div class="panel-body">
+
+		<div class="col-md-4">
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+				<span class="text">70%</span>
+			</div>
+
+<pre><code>&lt;div class="progress">
+	&lt;div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">&lt;/div>
+	&lt;span class="text">70%&lt;/span>
+&lt;/div>
+</code></pre>
+
+			<div class="progress">
+				<div class="progress-bar darkblue" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+				<span class="text">100%</span>
+			</div>
+			<div class="progress">
+				<div class="progress-bar darkgreen" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+				<span class="text">10%</span>
+			</div>
+			<div class="progress">
+				<div class="progress-bar yellow" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+				<span class="text">90%</span>
+			</div>
+			<div class="progress">
+				<div class="progress-bar blue" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 99%;"></div>
+				<span class="text">99%</span>
+			</div>
+			<div class="progress">
+				<div class="progress-bar green" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
+				<span class="text">1%</span>
+			</div>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+				<span class="text">0%</span>
+			</div>
+		</div>
+            <div class="col-md-4">
+                <div class="progress rounded">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                    <span class="text">70%</span>
+                </div>
+                <div class="progress rounded">
+                    <div class="progress-bar darkblue" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                    <span class="text">100%</span>
+                </div>
+                <div class="progress rounded">
+                    <div class="progress-bar darkgreen" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                    <span class="text">10%</span>
+                </div>
+                <div class="progress rounded">
+                    <div class="progress-bar yellow" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                    <span class="text">90%</span>
+                </div>
+                <div class="progress rounded">
+                    <div class="progress-bar blue" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 99%;"></div>
+                    <span class="text">99%</span>
+                </div>
+                <div class="progress rounded">
+                    <div class="progress-bar green" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
+                    <span class="text">1%</span>
+                </div>
+                <div class="progress rounded">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                    <span class="text">0%</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bar-group">
+                    <button class="btn btn-round"><i class="icon icon-minus"></i></button>
+                    <div class="progress rounded">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                        <span class="text">70%</span>
+                    </div>
+                    <button class="btn btn-round"><i class="icon icon-plus"></i></button>
+                </div>
+                <div class="bar-group">
+                    <button class="btn btn-round"><i class="icon icon-minus"></i></button>
+                    <div class="progress rounded">
+                        <div class="progress-bar green" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        <span class="text">100%</span>
+                    </div>
+                    <button class="btn btn-round"><i class="icon icon-plus"></i></button>
+                </div>
+
+            </div>
+
+
+	</div>
+</div>
+
+    <script src="../scripts/vendor.js"></script>
+
+
+    <script src="../scripts/plugins.js"></script>
+
+
+    <script src="../scripts/main.js"></script>
+
+
+</body>
+</html>
