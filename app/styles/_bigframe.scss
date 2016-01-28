@@ -1,0 +1,49 @@
+.big-frame {
+    height: 128px;
+    background: url(#{$imgPath}/bigframe_middle.gif) repeat-x;
+    display: inline-block;
+    position: relative;
+	margin: 10px 70px;
+    h1 {
+        margin-top: 37px;
+        font-size: 4em;
+    }
+    &:before {
+        background: $sprite 0 -570px;
+        content: '';
+        width: 64px;
+        height: 128px;
+        position: absolute;
+        left: -64px;
+    }
+    &:after {
+        background: $sprite -132px -570px;
+        content: '';
+        width: 64px;
+        height: 128px;
+        position: absolute;
+        right: -64px;
+        top:0;
+    }
+    .btn-close {
+        background: $sprite -198px -570px;
+        width: 138px;
+        height: 128px;
+        position: absolute;
+        right: -138px;
+        top: 0;
+        z-index: 2;
+        &:hover {
+            background: $sprite -338px -570px;
+            cursor: $cursorHand;
+        }
+        &:active {
+            background: $sprite -478px -570px;
+            cursor: $cursorClicked;
+        }
+        &[disabled] {
+            background: $sprite -618px -570px;
+            cursor: $cursorGrey;
+        }
+    }
+}

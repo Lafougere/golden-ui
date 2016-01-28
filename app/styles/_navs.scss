@@ -1,0 +1,129 @@
+.nav-tabs {
+	border: 0 !important;
+	margin-left:20px;
+	> li {
+		top:21px;
+		background: $mainGrey;
+		max-height: 40px;
+		a {
+			color: $textColor !important;
+			background: transparent !important;
+			border: 0 !important;
+			cursor: $cursorHand;
+			padding-top: 12px;
+			&:active {
+				cursor: $cursorClicked;
+			}
+		}
+		&.disabled a {
+			cursor: $cursorGrey !important;
+			color: $lightGrey !important;
+		}
+		&.active {
+			position: relative;
+			z-index: 1;
+
+			a, a:active, a:focus {
+				color: $textColor;
+				background: transparent;
+				cursor: $cursorBrown !important;
+			}
+		}
+		&::before {
+			border-image: url(#{$imgPath}/input.png) 28 round;
+			border-color: #f4be52;
+			border-style: outset;
+			border-width: 28px;
+			position: absolute;
+			background: $mainGrey;
+			background-clip: content-box;
+			padding: 0 4px;
+			content: '';
+			height: 100%;
+			width: 100%;
+			top:0;
+			left: 0;
+			border-bottom:0;
+		}
+	}
+	.dropdown-menu {
+		margin-top: -22px;
+	}
+	.dropdown.active {
+		max-height: 40px;
+		//overflow: hidden;
+		min-height: 0;
+		display: inline-block;
+		margin-bottom: 15px;
+		.dropdown-menu {
+			margin-top: -7px;
+		}
+	}
+}
+.tab-content {
+	position: relative;
+	.tab-pane {
+		border: 0 !important;
+		position: relative;
+		padding: 20px;
+		background: $mainGrey;
+		background-clip: content-box;
+	}
+	&::before {
+		border-image: url(#{$imgPath}/input.png) 28 round;
+		border-color: #f4be52;
+		border-style: outset;
+		border-width: 28px;
+		position: absolute;
+		background: #595652;
+		background-clip: content-box;
+		padding: 0 4px;
+		content: '';
+		height: 100%;
+		width: 100%;
+		top:0;
+		left: 0;
+		//z-index: 100;
+	}
+}
+.breadcrumb {
+	position: relative;
+	padding-left: 25px;
+	background: none;
+	border:0;
+	> li {
+		position: relative;
+		padding-top: 7px;
+		text-shadow: $textShadow;
+		a {
+			color: $textColor;
+			&:hover {
+				color: #fff;
+			}
+		}
+		+ li {
+			padding: 0 5px;
+			&:before {
+				content: ">";
+				padding: 0 13px 0 0;
+				color: #ccc;
+			}
+		}
+	}
+	&::before {
+		border-image: url(#{$imgPath}/input.png) 28 round;
+		border-color: #f4be52;
+		border-style: outset;
+		border-width: 28px;
+		position: absolute;
+		background: #595652;
+		background-clip: content-box;
+		padding: 0 4px;
+		content: '';
+		height: 100%;
+		width: 100%;
+		top:0;
+		left: 0;
+		//z-index: 100;
+	}
+}

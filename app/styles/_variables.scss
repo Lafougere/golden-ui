@@ -1,0 +1,92 @@
+
+
+$imgPath: "../images";
+$sprite: url(../images/sprite.png);
+
+
+// cursors
+$cursorHand: url(../images/cursors/cursor_hand.gif), pointer;
+$cursorClicked: url(../images/cursors/cursor_clicked.gif), pointer;
+$cursorGrey: url(../images/cursors/cursor_grey.png), not-allowed;
+$cursorBlack: url(../images/cursors/cursor_black.gif), default;
+$cursorRed: url(../images/cursors/cursor_red.gif), default;
+$cursorWhite: url(../images/cursors/cursor_white.gif), default;
+$cursorYellow: url(../images/cursors/cursor_yellow.gif), default;
+$cursorBrown: url(../images/cursors/cursor_brown.gif), default;
+
+
+
+// colors
+$deepBlue: #212033;
+$deeperBlue: #113;
+$brown: #8f563b;
+$darkBrown: #663931;
+$mainGrey: #595652;
+$secondaryGrey: #696a6a;
+$darkGrey: #323c39;
+$lightGrey: #847e88;
+
+$red: #f95664;
+$blue: #516fe5;
+$lightBlue: #399cff;
+$green: #00bf0d;
+$orange: #eb7e1e;
+$yellow: #fbf236;
+
+// bootstrap overrides
+$brand-primary:         $blue; // #337ab7
+$brand-success:         $green;
+$brand-info:            $lightBlue;
+$brand-warning:         $orange;
+$brand-danger:          $red;
+
+$state-success-text:             $green;
+$state-success-bg:               lighten($state-success-text, 40%);
+$state-success-border:           darken(adjust-hue($state-success-text, -10), 7%);
+
+$state-info-text:                $lightBlue;
+$state-info-bg:                  lighten($state-info-text, 15%);
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 15%);
+
+$state-warning-text:             $orange;
+$state-warning-bg:               lighten($state-warning-text, 18%);
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%);
+
+$state-danger-text:              $red;
+$state-danger-bg:                lighten($state-danger-text, 25%);
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 15%);
+
+$alert-success-bg:            $state-success-bg !default;
+$alert-success-text:          $green;
+$alert-success-border:        $state-success-border !default;
+
+$alert-info-bg:               $state-info-bg !default;
+$alert-info-text:             $lightBlue;
+$alert-info-border:           $state-info-border !default;
+
+$alert-warning-bg:            $state-warning-bg !default;
+$alert-warning-text:          $orange;
+$alert-warning-border:        $state-warning-border !default;
+
+$alert-danger-bg:             $state-danger-bg;
+$alert-danger-text:           $red;;
+$alert-danger-border:         $state-danger-border !default;
+
+// element colors
+$textColor: #ddd;
+$bgColor: $darkBrown;
+$panelBgColor: $mainGrey;
+// navbars
+$navbarBgColor: $secondaryGrey;
+$navbarBgColorInverse: $darkGrey;
+
+
+// shadows
+$textShadow: 2px 2px 0px $deeperBlue;
+
+// frame positions
+$posFrameCornerLeft: 0 0;
+$sizeFrameCornerLeft: (800px / 69px * 100%) (600px / 32px * 100%);
+
+
+

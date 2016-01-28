@@ -1,0 +1,48 @@
+.tooltip {
+    font-family: "Press Start 2P";
+    &.top .tooltip-arrow {
+        border-top-color: #222034;
+    }
+    &.left .tooltip-arrow {
+        border-left-color: #222034;
+    }
+    &.bottom .tooltip-arrow {
+        border-bottom-color: #222034;
+    }
+    &.right .tooltip-arrow {
+        border-right-color: #222034;
+    }
+    .tooltip-inner {
+        padding: 8px;
+        background-color: #222034;
+    }
+}
+.popover {
+    font-family: "Press Start 2P";
+    border: 2px solid #8d553a;
+    background-color: #8d553a;
+    &.top > .arrow:after {
+        border-top-color: #8d553a;
+    }
+    &.left > .arrow:after {
+        border-left-color: #8d553a;
+    }
+    &.bottom > .arrow:after {
+        border-bottom-color: #8d553a;
+    }
+    &.right > .arrow:after {
+        border-right-color: #8d553a;
+    }
+    .arrow {
+        border-width: 10px;
+
+    }
+    .popover-title {
+        background-color: #8d553a;
+        border-color: #643830;
+    }
+    .popover-content {
+        background-color: #643830;
+        border-color: #643830;
+    }
+}

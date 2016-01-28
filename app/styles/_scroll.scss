@@ -1,0 +1,168 @@
+[data-toggle="scrollpane"] {
+    outline:0;
+    overflow:hidden;
+    height:100%;
+    width:100%;
+    position:relative;
+}
+.scrollbar {
+	border:0;
+	position:absolute;
+	right:0;
+	top:0;
+	height:50%;
+	width:48px;
+	margin:60px 20px 20px 0;
+	-webkit-user-drag: none !important;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+    .scrollbar-track {
+        height:100%;
+        background:url(#{$imgPath}/scrollbar_middle.gif) repeat-y center center;
+        width:20px;
+        position:absolute;
+        top:20px;
+        right:14px;
+        display: block;
+        cursor: $cursorHand;
+        &:active {
+            cursor: $cursorClicked;
+        }
+    }
+    .scrollbar-arrow {
+        position: absolute;
+        width: 48px;
+        right: -14px;
+        cursor: $cursorHand;
+        &.up {
+            height: 54px;
+            top: -54px;
+            background: $sprite -170px 0;
+            &:after {
+                background: $sprite -348px -65px;
+                content: '';
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                z-index: 20;
+                top: 14px;
+                left: 14px;
+
+            }
+        }
+        &.down {
+            height: 50px;
+            background: $sprite -170px -54px;
+            bottom: -50px;
+            &:before {
+                top: 12px;
+            }
+            &:after {
+                background: $sprite -380px -67px;
+                content: '';
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                z-index: 20;
+                top: 18px;
+                left: 14px;
+            }
+            &:active:after {
+                top: 19px;
+            }
+        }
+        &:active {
+            cursor: $cursorClicked;
+            &:after {
+                top: 15px;
+            }
+        }
+        &:before {
+            background: $sprite -86px 0;
+            width: 28px;
+            height: 28px;
+            top: 10px;
+            left: 10px;
+            content:'';
+            position: absolute;
+            z-index: 3;
+
+        }
+        &:hover:before {
+            background: $sprite -86px -28px;
+        }
+        &:active:before {
+            background: $sprite -86px -56px;
+            padding-top: 1px;
+        }
+        &.disabled:before {
+            background: $sprite -142px -56px;
+            cursor: $cursorGrey;
+            z-index: 3;
+        }
+        &.disabled:after {
+            cursor: $cursorGrey;
+            opacity: .7;
+        }
+        &.disabled:active:after {
+            top:14px;
+        }
+        &.down.disabled:active:after {
+            top:18px;
+        }
+    }
+
+    .scrollbar-handle {
+        position:absolute;
+        background: $sprite -258px 0;
+        width:24px;
+        height:34px;
+        left:-2px;
+        top:0;
+        transition:all .2s linear;
+        cursor: $cursorHand;
+        &:active {
+            cursor: $cursorClicked;
+        }
+    }
+}
+
+.external-scroll {
+    .scrollbar {
+        right:-35px;
+        margin-top:50px;
+        margin-right:0;
+    }
+    .scrollbar-arrow {
+        &:before {
+            left: 2px;
+        }
+
+        &.up {
+            width:40px;
+            background-position: -218px 0;
+            &:before {
+                left: 2px;
+            }
+            &:after {
+                left: 6px;
+            }
+        }
+        &.down {
+            width:40px;
+            background-position: -218px -54px;
+            &:after {
+                left: 6px;
+            }
+        }
+    }
+}
+
+.panel:not(.external-scroll) .panel-body.scroll-pane {padding-right:60px;}
+.hide-scrollbar .scrollbar {display:none;}
+.panel.external-scroll.hide-scrollbar {margin-right:3px;}
+.panel.external-scroll {margin-right:35px;}
+.modal .external-scroll .scrollbar {right:-35px;margin-top:35px;}

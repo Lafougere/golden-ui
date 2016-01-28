@@ -1,0 +1,35 @@
+.icon {
+    background: $sprite;
+    width: 20px;
+    height: 20px;
+    display:block;
+    margin-left:4px;
+    margin-top:2px;
+    position:relative;
+    background-position:-1px -1px;
+}
+.icon-plus {background-position:-284px -34px;}
+.icon-minus {background-position:-316px -34px;}
+.icon-search {background-position:-316px -2px;}
+.icon-talk {background-position:-348px -2px;}
+.icon-yes {background-position: -284px -66px;}
+.icon-no {background-position:-316px -66px;}
+.icon-arrow-left {background-position: -348px -34px;}
+.icon-arrow-up {background-position: -348px -65px;}
+.icon-arrow-right {background-position: -380px -34px;}
+.icon-arrow-down {background-position: -380px -67px;}
+
+
+/*
+.icon.icon-ui-cog {background:url(../img/ui/icon_sprite_2.png) 0 -54px;width:56px; height:52px;margin:0;background-origin:padding-box;}
+:hover>.icon.icon-ui-cog {background-position: 0 -178px;}
+.icon.icon-ui-fight {background:url(../img/ui/icon_sprite_2.png) 0 0;width:56px; height:52px;margin:0;}
+:hover>.icon.icon-ui-fight {background-position: 0 -122px;}
+.icon.icon-ui-sheet {background:url(../img/ui/icon_sprite_2.png) -73px -34px;width:53px; height:52px;margin:0;}
+:hover>.icon.icon-ui-sheet {background-position: -73px -156px;}
+
+.icon-purse {background:url(../img/icons/purse-small.png); width:32px;height:32px;display:inline-block;}
+.icon-backpack {background:url(../img/icons/backpack-small.png); width:32px;height:32px;display:inline-block;}
+.icon-keyring {background:url(../img/icons/key-small.png); width:32px;height:32px;display:inline-block;}
+:active:not(.disabled)>.icon {margin-top:5px;}
+*/

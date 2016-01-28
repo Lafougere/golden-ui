@@ -1,0 +1,229 @@
+.form-control {
+    border-image: url(#{$imgPath}/input.png) 28 round;
+    border-color: #f4be52;
+    border-style: outset;
+    border-width: 28px;
+    height: 52px;
+    background: #595652;
+    background-clip: content-box;
+    box-shadow: none;
+    outline: 0;
+    padding: 0;
+    color:#ddd !important;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    &:focus {
+        box-shadow: 1px 1px 12px #d27d2c;
+    }
+    &[readonly]{
+        cursor: $cursorBrown;
+    }
+}
+input:-webkit-autofill,input:-webkit-autofill:focus {color:#ddd;-webkit-text-fill-color: #ddd;-webkit-box-shadow:none;}
+.form-control-feedback {font-size: 20px;padding-top: 10px;right: 10px;}
+
+select.form-control {
+    background: url(#{$imgPath}/input_left.gif) left center no-repeat,
+            url(#{$imgPath}/input_right.gif) right center no-repeat,
+            url(#{$imgPath}/input_middle.gif) center repeat-x #595652;
+    border: 0;
+    border-image:none;
+    padding: 0 10px;
+    height: 54px;
+    background-clip: border-box, border-box, content-box;
+    &[multiple] {
+        height: auto;
+        background: none;
+        border-image: url(#{$imgPath}/input.png) 28 round;
+        border-color: #f4be52;
+        border-style: outset;
+        border-width: 28px;
+        padding: 0;
+    }
+}
+legend {
+	border-bottom: 2px solid $lightGrey;
+	color: $textColor;
+	text-shadow: $textShadow;
+}
+label {
+	cursor: $cursorHand;
+}
+input[type='checkbox'],input[type='radio']{
+    display:inline-block;
+    background: $sprite no-repeat -611px -76px;
+    height:24px;
+    width: 24px;
+    margin-left: -30px !important;
+    max-height:24px;
+    cursor: $cursorHand;
+    position: relative;
+    top:-8px;
+    left: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    outline:0;
+    &:checked {
+        background-position: -637px -76px;
+    }
+    &:focus {
+        outline: 0;
+    }
+    &:active {
+        cursor: $cursorClicked;
+    }
+    &+label {
+        margin-left: 10px;
+    }
+
+}
+
+input[type="file"]:before {
+    background: url(../images/buttons/btn_primary_left.gif) left center no-repeat,
+                url(../images/buttons/btn_primary_right.gif) right center no-repeat,
+                url(../images/buttons/btn_middle.gif) center center repeat-x;
+    background-clip: border-box, border-box, content-box;
+    content: "Select files";
+    padding:  0 18px;
+    line-height: 48px;
+    position: absolute;
+    top: -0px;
+    left: 0;
+    width: auto;
+    text-shadow: 2px 2px 0px #113;
+}
+input[type="file"] {
+    padding-left: 56px;
+    padding-top: 14px;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 15px;
+    cursor: $cursorHand;
+    &:active:before {
+        cursor: $cursorClicked;
+        background: url(../images/buttons/btn_primary_left_active.gif) left center no-repeat,
+                    url(../images/buttons/btn_primary_right_active.gif) right center no-repeat,
+                    url(../images/buttons/btn_middle_active.gif) center center repeat-x;
+        background-clip: border-box, border-box, content-box;
+        padding-top: 1px;
+        top: 0px;
+    }
+    &:focus {
+        outline:0;
+    }
+    &:hover:before {
+        color:#fff;
+    }
+}
+
+input[disabled], select[disabled], textarea[disabled] {
+    cursor: $cursorGrey !important;
+}
+
+fieldset[disabled] {
+    .checkbox label, .radio label, select, input, textarea {
+        cursor: $cursorGrey !important;
+    }
+
+}
+
+.form-inline {
+
+    input[type='checkbox'],input[type='radio'] {
+        left: 6px;
+        top: 4px;
+    }
+}
+.form-horizontal {
+    label {
+        margin-top: 12px;
+    }
+    input[type='checkbox'],input[type='radio'] {
+        left: 30px;
+        top: 0;
+    }
+	input[type='radio'] {
+        top: 12px;
+    }
+    .checkbox {
+        label {
+            margin-top: 0;
+        }
+    }
+    .form-control-feedback {
+        right: 25px !important;
+    }
+    .form-control-static {
+        margin-top: 12px;
+    }
+}
+.checkbox, .radio {
+    label {
+        padding-left: 30px !important;
+        cursor: $cursorHand !important;
+        user-select: none;
+        &:active {
+            cursor: $cursorClicked;
+        }
+    }
+}
+.checkbox-inline, .radio-inline {
+    padding-left: 30px;
+    cursor: $cursorHand !important;
+}
+
+.input-group {
+    .input-group-addon {
+        &:first-child {
+            border-image: url(#{$imgPath}/input.png) 28 round;
+            border-color: #f4be52;
+            border-style: outset;
+            border-width: 28px;
+            position: relative;
+            z-index: 3;
+            color: #ddd;
+            line-height: 0;
+            height: 56px;
+            padding: 0 2px;
+            background: transparent;
+            &:after {
+                content: '';
+                width: 46px;
+                height: 56px;
+                background: url(#{$imgPath}/input_join.png);
+                position: absolute;
+                top:-28px;
+            }
+            /*background: url(#{$imgPath}/input_left.gif) left center no-repeat,
+                        url(#{$imgPath}/input_join.png) right center no-repeat,
+                        url(#{$imgPath}/input_middle.gif) center repeat-x #595652;*/
+        }
+    }
+    .form-control + .input-group-addon {
+        border-image: url(#{$imgPath}/input.png) 28 round;
+        border-color: #f4be52;
+        border-style: outset;
+        border-width: 28px;
+        position: relative;
+        z-index: 3;
+        color: #ddd;
+        line-height: 0;
+        height: 56px;
+        padding: 0 2px;
+        background: transparent;
+        &:before {
+            content: '';
+            width: 46px;
+            height: 56px;
+            background: url(#{$imgPath}/input_join.png);
+            position: absolute;
+            top:-28px;
+            left: -46px;
+        }
+    }
+}

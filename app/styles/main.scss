@@ -1,0 +1,181 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+@import '_variables';
+
+
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script|Tangerine|Great+Vibes|Alex+Brush|Press+Start+2P|VT323|Aladin|MedievalSharp|UnifrakturCook:700|Germania+One|Jim+Nightshade);
+
+
+
+
+@import '_alerts';
+@import '_panel';
+@import '_buttons';
+@import '_scroll';
+@import '_icons';
+@import '_progress';
+@import '_slots';
+@import '_slots_size3';
+@import '_bigframe';
+@import '_hud';
+@import '_form';
+@import '_dropdown';
+@import '_tooltip';
+@import '_navbar';
+@import '_modal';
+@import '_navs';
+@import '_tables';
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.bs-component {
+    position: relative;
+	.modal {
+		position: relative;
+		top: auto;
+		right: auto;
+		left: auto;
+		bottom: auto;
+		z-index: 1;
+		display: block;
+	}
+}
+.list-group-item {
+	background: $brown;
+	border-width: 3px;
+	border-top-width: 1px;
+	border-color: $darkBrown;
+	color: $textColor !important;
+	text-shadow: $textShadow;
+	cursor: $cursorHand;
+	h4 {
+		color: $darkBrown !important;
+	}
+	&:first-child {
+		border-top-width: 3px;
+	}
+	&:hover {
+		background: darken($brown, 5%) !important;
+		border-color: $darkBrown !important;
+	}
+	&.active, &:focus, &:active {
+		background: $darkBrown !important;
+		border-width: 3px;
+		border-top-width: 3px;
+		border-color: $darkBrown !important;
+	}
+	&:active {
+		cursor: $cursorClicked;
+	}
+}
+.test {
+    background: red;
+    width: 100%;
+    height: 300px;
+    display: block;
+    position: relative;
+}
+body {
+    font-family: "Press Start 2P";
+    //font-size:1.8em;
+    cursor: $cursorBrown;
+	color: $textColor;
+	background: $bgColor;
+	line-height: 1.8;
+}
+a, [role='button'] {
+	cursor: $cursorHand;
+	text-decoration: none !important;
+	&:active {
+		cursor: $cursorClicked;
+	}
+	&:hover {
+
+	}
+}
+h1,h2,h3,h4 {
+    text-shadow: $textShadow;
+}
+mark {
+	background: $textColor;
+	color: #666;
+}
+abbr[title], abbr[data-original-title] {
+    cursor: help;
+	padding-bottom: 2px;
+    border-bottom: 2px dotted #777777;
+}
+blockquote {
+	border-color: #ccc;
+}
+code {
+    color: #3f3f74;
+	background: #ccc;
+    text-shadow: none;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+pre {
+	text-shadow: none;
+	word-wrap: break-word;
+	word-break: break-all;
+	margin: 10px;
+    position: relative;
+    padding: 20px;
+    background: #8d553a;
+    border: 0;
+    background-clip: content-box;
+    z-index: 2;
+    color: #d9d35e;
+	text-align: left;
+	tab-size: 4;
+	&:before {
+		border-image: url(#{$imgPath}/input.png) 28 round;
+		border-color: #f4be52;
+		border-style: outset;
+		border-width: 28px;
+		position: absolute;
+		background: #595652;
+		background-clip: content-box;
+		padding: 0 2px;
+		content: '';
+		height: 100%;
+		width: 100%;
+		top:0;
+		left: 0;
+		z-index: -10;
+	}
+	&:after {
+		position: absolute;
+		background: #8d553a;
+		background-clip: content-box;
+		padding: 8px;
+		content: '';
+		height: 100%;
+		width: 100%;
+		top:0;
+		left: 0;
+		z-index: -1;
+		opacity: .9;
+
+	}
+	code {
+		max-width: 100%;
+	}
+}
+hr {
+    border-top: 4px groove #888;
+
+}
+.label {
+	padding-top: 4px;
+}

@@ -1,0 +1,259 @@
+.btn {
+    outline:0;
+    border:0;
+    text-shadow: 2px 2px 0px #113;
+    color:#ccc;
+    display: inline-block;
+    cursor: $cursorHand;
+    max-width: 100%;
+    background-color: transparent !important;
+    &:hover {
+        color:#eee;
+        background-color: transparent;
+
+    }
+    &:focus {
+        outline:0 !important;
+        border:0 !important;
+        box-shadow: none;
+        color:#fff;
+        background-color: transparent;
+    }
+    &:active {
+        cursor: $cursorClicked;
+        color:#fff !important;
+    }
+}
+fieldset[disabled] {
+    .btn {
+        cursor: $cursorGrey !important;
+    }
+    .btn-primary:hover {
+        background: url(../images/buttons/btn_secondary_left.gif) left center no-repeat,
+                    url(../images/buttons/btn_secondary_right.gif) right center no-repeat,
+                    url(../images/buttons/btn_secondary_middle.gif) center center repeat-x;
+        background-clip: border-box, border-box, content-box;
+        color:#ccc;
+    }
+
+}
+.btn-default {
+    background: url(../images/buttons/btn_primary_left.gif) left center no-repeat,
+                url(../images/buttons/btn_primary_right.gif) right center no-repeat,
+                url(../images/buttons/btn_middle.gif) center center repeat-x;
+    background-clip: border-box, border-box, content-box;
+    height: 48px;
+    line-height: 48px;
+
+    padding: 0 20px;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+    &:active {
+        background: url(../images/buttons/btn_primary_left_active.gif) left center no-repeat,
+                    url(../images/buttons/btn_primary_right_active.gif) right center no-repeat,
+                    url(../images/buttons/btn_middle_active.gif) center center repeat-x;
+        background-clip: border-box, border-box, content-box;
+        background-color: transparent !important;
+        line-height: 50px;
+    }
+
+}
+
+.btn-primary {
+    background: url(../images/buttons/btn_secondary_left.gif) left center no-repeat,
+                url(../images/buttons/btn_secondary_right.gif) right center no-repeat,
+                url(../images/buttons/btn_secondary_middle.gif) center center repeat-x;
+    background-clip: border-box, border-box, content-box;
+    height: 56px;
+    line-height: 54px;
+    padding: 2px 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {
+        color:#fff;
+        background: url(../images/buttons/btn_secondary_left_hover.gif) left center no-repeat,
+                    url(../images/buttons/btn_secondary_right_hover.gif) right center no-repeat,
+                    url(../images/buttons/btn_secondary_middle_hover.gif) center center repeat-x;
+        background-clip: border-box, border-box, content-box;
+    }
+    &:active {
+        color:#fff;
+        background: url(../images/buttons/btn_secondary_left_active.gif) left center no-repeat,
+                    url(../images/buttons/btn_secondary_right_active.gif) right center no-repeat,
+                    url(../images/buttons/btn_secondary_middle_active.gif) center center repeat-x;
+        background-clip: border-box, border-box, content-box;
+        padding-top: 3px;
+    }
+}
+
+.btn-list {
+    > li {
+        list-style: none;
+        float: left;
+        width: 48px;
+        height: 48px;
+        background: $sprite -685px -426px;
+        margin: 5px 0;
+        padding: 12px 10px;
+        cursor: $cursorHand;
+        &:first-child {
+            background-position: -635px -426px;
+            &:hover {
+                background-position: -635px -476px;
+            }
+        }
+        &:last-child {
+            background-position: -735px -426px;
+            &:hover {
+                background-position: -735px -476px;
+            }
+        }
+        &:first-child:last-child {
+            background-position: -944px -111px;
+            width: 50px;
+            &:hover {
+                background-position: -766px -577px;
+            }
+        }
+        &:hover {
+            background-position: -685px -476px;
+        }
+        &:active {
+            background-position: -685px -476px;
+            padding-top: 13px;
+            cursor: $cursorClicked;
+        }
+        &.active {
+            background-position: -685px -476px;
+            padding-top: 13px;
+        }
+    }
+    &:after {
+        content:'';
+        display:table;
+        zoom:1;
+        clear:both;
+    }
+}
+
+.btn-round, .navbar-toggle {
+    background: $sprite -86px 0 no-repeat;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    text-align: center;
+    margin: 10px 0 14px 10px;
+    &.circled {
+
+        position: relative;
+        &:after {
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            width: 48px;
+            height: 48px;
+            content:'';
+            background: $sprite 0 -48px no-repeat;
+        }
+    }
+    &:hover {
+        background: $sprite -86px -28px no-repeat;
+    }
+    &:active {
+        background: $sprite -86px -56px no-repeat;
+        padding-top: 1px;
+    }
+    &.green {
+        background: $sprite -58px 0 no-repeat;
+        &:hover {
+            background: $sprite -58px -28px no-repeat;
+        }
+        &:active {
+            background: $sprite -58px -56px no-repeat;
+        }
+    }
+    &.red {
+        background: $sprite -114px 0 no-repeat;
+        &:hover {
+            background: $sprite -114px -28px no-repeat;
+        }
+        &:active {
+            background: $sprite -114px -56px no-repeat;
+        }
+    }
+    &.grey {
+        background: $sprite -142px 0 no-repeat;
+        &:hover {
+            background: $sprite -142px -28px no-repeat;
+        }
+        &:active {
+            background: $sprite -142px -56px no-repeat;
+        }
+    }
+    &[disabled] {
+        background: $sprite -142px 0 no-repeat;
+        cursor: $cursorGrey;
+    }
+}
+.btn-group {
+    max-width: 100%;
+    .btn-round:first-child {
+        position: absolute;
+        z-index: 3;
+        top:0;
+        left:9px;
+    }
+    .btn-round + .btn-default {
+        padding-left: 65px;
+        text-overflow: clip;
+        background: url(../images/buttons/btn_addon_left.gif) left center no-repeat,
+                    url(../images/buttons/btn_primary_right.gif) right center no-repeat,
+                    url(../images/buttons/btn_middle.gif) center center repeat-x;
+        background-clip: border-box, border-box, content-box;
+        &:active {
+            background: url(../images/buttons/btn_addon_left_active.gif) left center no-repeat,
+                        url(../images/buttons/btn_primary_right_active.gif) right center no-repeat,
+                        url(../images/buttons/btn_middle_active.gif) center center repeat-x;
+            background-clip: border-box, border-box, content-box;
+        }
+    }
+    .btn-default:not(:last-child) {
+        padding-right: 65px;
+        background: url(../images/buttons/btn_primary_left.gif) left center no-repeat,
+                    url(../images/buttons/btn_addon_right.gif) right center no-repeat,
+                    url(../images/buttons/btn_middle.gif) center center repeat-x;
+        background-clip: border-box, border-box, content-box;
+        &:active {
+            background: url(../images/buttons/btn_primary_left_active.gif) left center no-repeat,
+                        url(../images/buttons/btn_addon_right_active.gif) right center no-repeat,
+                        url(../images/buttons/btn_middle_active.gif) center center repeat-x;
+            background-clip: border-box, border-box, content-box;
+        }
+    }
+    .btn-default + .btn-round {
+        position: absolute;
+        z-index: 3;
+//        top:0;
+        margin-left:0;
+        right:10px;
+    }
+    .btn-round + .btn-default:not(:last-child) {
+        padding-left: 65px;
+        background: url(../images/buttons/btn_addon_left.gif) left center no-repeat,
+                    url(../images/buttons/btn_addon_right.gif) right center no-repeat,
+                    url(../images/buttons/btn_middle.gif) center center repeat-x;
+        background-clip: border-box, border-box, content-box;
+        &:active {
+            background: url(../images/buttons/btn_addon_left_active.gif) left center no-repeat,
+                        url(../images/buttons/btn_addon_right_active.gif) right center no-repeat,
+                        url(../images/buttons/btn_middle_active.gif) center center repeat-x;
+            background-clip: border-box, border-box, content-box;
+        }
+    }
+    .btn-round + .btn-default + .btn-round {
+        right:11px;
+    }
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    margin-left: 1px;
+}

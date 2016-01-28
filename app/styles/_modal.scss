@@ -1,0 +1,77 @@
+.modal-content {
+	@extend .panel;
+	margin-top: 60px;
+	background: none;
+	border-radius: 20px;
+	border: 0;
+	.modal-header {
+		background: url(#{$imgPath}/frame_header_middle.gif) repeat-x;
+		height: 63px;
+		width: 100%;
+		top: -40px;
+		position: absolute;
+		left:0;
+		margin: 0;
+		float: none;
+		max-width: none;
+		padding: 0 50px;
+		background-clip: content-box;
+		border:0;
+		text-align: left;
+		overflow: visible;
+		h4 {
+			left: -24px;
+			position: relative;
+			top: 12px;
+		}
+		&:before {
+			background: $sprite -541px 0;
+			height: 77px;
+			width: 63px;
+			left: 0;
+			content:'';
+			position: absolute;
+		}
+		&:after {
+			background: $sprite -605px 0;
+			height: 69px;
+			width: 64px;
+			//z-index: 3;
+			right:0;
+			top:-8px;
+			content:'';
+			position: absolute;
+			pointer-events: none;
+		}
+		.close {
+			background: $sprite -114px 0 no-repeat;
+			position: absolute;
+			right: 22px;
+			top: 4px;
+			opacity: 1;
+			width: 28px;
+    		height: 28px;
+			color: $textColor;
+			text-shadow: $textShadow;
+			outline: none;
+			padding-top: 3px;
+			&:hover {
+				background: $sprite -114px -28px no-repeat;
+			}
+			&:active {
+				background: $sprite -114px -56px no-repeat;
+				padding-top: 5px;
+			}
+		}
+
+	}
+	.modal-body {
+		@extend .panel-body;
+
+	}
+	.modal-footer {
+		position: relative;
+		padding: 0 15px;
+		border-top: 4px groove #888;
+	}
+}

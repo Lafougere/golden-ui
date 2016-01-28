@@ -1,0 +1,33 @@
+td {
+	text-shadow: $textShadow;
+	border-width: 2px !important;
+	border-color: $lightGrey !important;
+}
+tr {
+	background: transparent;
+}
+th {
+	text-shadow: $textShadow;
+	border-color: $darkGrey !important;
+}
+tr.info > td {
+	background: $lightBlue !important;
+}
+tr.success > td {
+	background: $green !important;
+}
+tr.warning > td {
+	background: $orange !important;
+}
+tr.danger > td {
+	background: $red !important;
+}
+tr.active > td {
+	background: $blue !important;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: $lightGrey;
+}
+.table-hover > tbody > tr:hover {
+    background-color: rgba(0,0,0,0.1);
+}

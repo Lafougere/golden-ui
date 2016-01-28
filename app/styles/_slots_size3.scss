@@ -1,0 +1,145 @@
+.slot-col {
+    &.size-3 {
+        width:224px;
+        > li {
+            height: 72px;
+            width: 72px;
+            background-position: -76px -180px;
+            &:nth-child(-n+2) { // top
+                background-position: -77px -104px;
+                height: 76px;
+                &:hover {
+                    background-position: -301px -104px;
+                }
+                &:active {
+                    background-position: -597px -104px;
+                    padding-top: 5px;
+                }
+                &.active {
+                    background-position: -597px -104px;
+                    padding-top: 5px;
+                }
+            }
+            &:nth-child(3) { // top right
+                background-position: -149px -104px;
+                height: 76px;
+                width: 76px;
+                &:hover {
+                    background-position: -373px -104px;
+                }
+                &:active {
+                    background-position: -597px -104px;
+                    padding-top: 5px;
+                }
+                &.active {
+                    background-position: -597px -104px;
+                    padding-top: 5px;
+                }
+            }
+            &:nth-child(3n+1) { // left
+                background-position: -1px -180px;
+                width: 76px;
+                &:hover {
+                    background-position: -225px -180px;
+                }
+                &:active {
+                    background-position: -449px -180px;
+                    padding-top: 5px;
+                }
+                &.active {
+                    background-position: -449px -180px;
+                    padding-top: 5px;
+                }
+            }
+            &:nth-child(3n+6) { // right
+                background-position: -149px -180px;
+                width: 76px;
+                &:hover {
+                    background-position: -373px -180px;
+                }
+                &:active {
+                    background-position: -597px -180px;
+                    padding-top: 5px;
+                }
+                &.active {
+                    background-position: -597px -180px;
+                    padding-top: 5px;
+                }
+            }
+            &:nth-last-child(-n+2) { // bottom
+                background-position: -77px -252px;
+                height: 76px;
+                &:hover {
+                    background-position: -301px -252px;
+                }
+                &:active {
+                    background-position: -525px -252px;
+                    padding-top: 5px;
+                }
+                &.active {
+                    background-position: -525px -252px;
+                    padding-top: 5px;
+                }
+            }
+            &:nth-last-child(3) { // bottom left
+                background-position: -1px -252px;
+                height: 76px;
+                width: 76px;
+                &:hover {
+                    background-position: -225px -252px;
+                }
+                &:active {
+                    background-position: -449px -252px;
+                    padding-top: 5px;
+                }
+                &.active {
+                    background-position: -449px -252px;
+                    padding-top: 5px;
+                }
+            }
+            &:first-child { //top left
+                background-position: -1px -104px;
+                height: 76px;
+                width: 76px;
+                &:hover {
+                    background-position: -225px -104px;
+                }
+                &:active {
+                    background-position: -449px -104px;
+                    padding-top: 9px;
+                }
+                &.active {
+                    background-position: -449px -104px;
+                    padding-top: 9px;
+                }
+            }
+            &:last-child  { // bottom right
+                background-position: -149px -252px;
+                height: 76px;
+                width: 76px;
+                &:hover {
+                    background-position: -373px -252px;
+                }
+                &:active {
+                    background-position: -597px -252px;
+                    padding-top: 5px;
+                }
+                &.active {
+                    background-position: -597px -252px;
+                    padding-top: 5px;
+                }
+            }
+            &:hover {
+                background-position: -301px -180px;
+            }
+            &:active {
+                background-position: -525px -180px;
+                padding-top: 5px;
+            }
+            &.active {
+                background-position: -525px -180px;
+                padding-top: 5px;
+            }
+        }
+    }
+}

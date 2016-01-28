@@ -1,0 +1,100 @@
+
+
+.dropdown {
+    min-height: 56px;
+    display: inline-block;
+    //z-index: 3;
+    //overflow: hidden;
+    position: relative;
+    //padding: 10px;
+    >.btn {
+        position: relative;
+        padding:  0 10px;
+        top:8px;
+        width: 100%;
+        text-align: left;
+        display: block;
+    }
+    >* {
+        //z-index:1;
+
+    }
+    .icon {
+        float:right;
+        margin-left: 20px;
+    }
+    .dropdown-menu {
+        background: #555;
+        //max-height: 0px;
+        //border-top: 2px solid #999;
+        //overflow: hidden;
+        //top:24px;
+		background-clip: content-box;
+		border:0;
+        padding: 10px;
+        .divider {
+            height: 2px;
+            background: #999;
+            border-radius: 3px;
+        }
+        li {
+			position: relative;
+            a {
+                color:#ddd;
+                line-height: 28px;
+                &:hover {
+                    background: #6a6b6b;
+                    cursor: $cursorHand;
+                    //color:#555;
+                }
+                &:active {
+                    cursor: $cursorClicked;
+                    outline:0;
+                }
+
+            }
+        }
+        &::before {
+			border-image: url(#{$imgPath}/input.png) 28 round;
+			border-color: #f4be52;
+			border-style: outset;
+			border-width: 28px;
+			position: absolute;
+			background: #595652;
+			background-clip: content-box;
+			padding: 0 4px;
+			content: '';
+			height: 100%;
+			width: 100%;
+			top:0;
+			left: 0;
+			//z-index: 100;
+		}
+        /*&:after {
+            content: '';
+            display: table;
+            clear: both;
+        }*/
+    }
+    &:before {
+        border-image: url(#{$imgPath}/input.png) 28 round;
+        border-color: #f4be52;
+        border-style: outset;
+        border-width: 28px;
+        position: absolute;
+        background: #595652;
+        background-clip: content-box;
+        padding: 0 2px;
+        content: '';
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+        //z-index: 99;
+    }
+    &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+}
