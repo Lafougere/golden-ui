@@ -44,10 +44,7 @@ fieldset[disabled] {
     background-clip: border-box, border-box, content-box;
     height: 48px;
     line-height: 48px;
-
     padding: 0 20px;
-    //overflow: hidden;
-    //text-overflow: ellipsis;
     &:active {
         background: url(../images/buttons/btn_primary_left_active.gif) left center no-repeat,
                     url(../images/buttons/btn_primary_right_active.gif) right center no-repeat,

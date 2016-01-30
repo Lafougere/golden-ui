@@ -133,7 +133,6 @@
 			}
         },
 		onTrackClick: function(e){
-
 			if (this.isDragging || this.isArrowDown){
 				this.isDragging = false
                 this.isArrowDown = false

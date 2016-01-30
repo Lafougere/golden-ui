@@ -49,21 +49,6 @@
 		border:0;
 		cursor: $cursorHand;
 		margin: 11px 26px;
-		//display: block;
-		//span {display:none;}
-		/*&:before {
-			//@extend .btn-round;
-			content: '';
-			position: absolute;
-			background: $sprite -86px 0 no-repeat;
-			width: 28px;
-			height: 28px;
-			padding: 0;
-			text-align: center;
-			top:0;
-			left:0;
-
-		}*/
 		&:after {
             position: absolute;
             left: -10px;

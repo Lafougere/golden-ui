@@ -227,3 +227,74 @@ fieldset[disabled] {
         }
     }
 }
+a.numberfield {
+	width: 68px;
+	height: 48px;
+	background: $sprite -473px 0 ;
+	display: inline-block;
+	position: relative;
+	&.plus {
+		background: $sprite -473px -48px;
+		&:before {
+			margin: 10px 0 14px 30px;
+		}
+		&:after {
+			left:34px;
+			background-position: -284px -34px;
+		}
+	}
+	&.disabled {
+		cursor: $cursorGrey;
+		&:before {
+			background: $sprite -142px 0 no-repeat !important;
+		}
+		&:after {
+			margin-top: 0 !important;
+		}
+	}
+	&:hover {
+		&:before {
+			background: $sprite -86px -28px no-repeat;
+		}
+	}
+	&:active {
+		&:before {
+			background: $sprite -86px -56px no-repeat;
+		}
+		&:after {
+			margin-top: 1px;
+		}
+	}
+	&:before {
+		background: $sprite -86px 0 no-repeat;
+		width: 28px;
+		height: 28px;
+		padding: 0;
+		text-align: center;
+		margin: 10px 0 14px 10px;
+		content: "";
+		position: absolute;
+	}
+	&:after {
+		background: $sprite -316px -34px no-repeat;
+		width: 20px;
+    	height: 20px;
+		position: absolute;
+		z-index: 3;
+		content: "";
+		top: 14px;
+		left: 14px;
+	}
+}
+input.numberfield {
+	background: url(#{$imgPath}/progress/fillbar_rounded_middle.gif);
+	height: 48px;
+	border: 0;
+	outline: 0;
+	display: inline-block;
+	margin: 0;
+	width: 40px;
+	text-align: center;
+	position: relative;
+	top: -18px;
+}
