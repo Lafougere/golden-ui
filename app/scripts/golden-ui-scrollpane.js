@@ -149,14 +149,16 @@
 			this.updateArrowStatus()
 		},
 		onMouseWheel: function(e){
-			e.preventDefault()
-			e.stopPropagation()
 			this.computeSize()
 			if (e.originalEvent.deltaY > 0){
 				this.sliceId = Math.min(this.slices, this.sliceId + 1)
 			}
 			else {
 				this.sliceId = Math.max(0, this.sliceId - 1)
+			}
+			if (this.sliceId > 0 && this.sliceId < this.slices){
+				e.preventDefault()
+				e.stopPropagation()
 			}
 			this.$handle.css('top', this.sliceId * this.handleIncrement).css('transition', "none")
 			this.$element.scrollTop(this.contentIncrement * this.sliceId)
