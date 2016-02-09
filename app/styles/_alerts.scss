@@ -2,3 +2,23 @@
 	border-width: 3px;
 	text-shadow: $textShadow;
 }
+.alert-success {
+    background-color: lighten($green, 40%);
+    border-color: darken(adjust-hue($green, -10), 7%);
+    color: $green;
+}
+.alert-warning {
+    background-color: lighten($orange, 18%);
+    border-color: darken(adjust-hue($orange, -10), 5%);
+    color: $orange;
+}
+.alert-info {
+    background-color:  lighten($lightBlue, 15%);
+    border-color: darken(adjust-hue($lightBlue, -10), 15%);
+    color: $lightBlue;
+}
+.alert-danger {
+    background-color:  lighten($red, 25%);
+    border-color: darken(adjust-hue($red, -10), 15%);
+    color: $red;
+}

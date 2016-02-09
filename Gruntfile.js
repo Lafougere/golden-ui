@@ -21,7 +21,8 @@ module.exports = function (grunt) {
   // Configurable paths
   var config = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist',
+	pagesdist: 'pages-dist'
   };
 
 	grunt.loadNpmTasks('grunt-processhtml');
@@ -104,7 +105,7 @@ module.exports = function (grunt) {
         options: {
           background: false,
 			server: {
-				baseDir: '<%= config.dist %>',
+				baseDir: '<%= config.pagesdist %>',
 				routes: {
 				  '/bower_components': './bower_components'
 				}
@@ -123,6 +124,16 @@ module.exports = function (grunt) {
             '.tmp',
             '<%= config.dist %>/*',
             '!<%= config.dist %>/.git*'
+          ]
+        }]
+      },
+	  pages: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= config.pagesdist %>/*',
+            '!<%= config.pagesdist %>/.git*'
           ]
         }]
       },
@@ -186,7 +197,16 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
+          src: ['golden-ui.{scss,sass}'],
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
+      },
+	  pages: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/styles',
+          src: ['main.{scss,sass}'],
           dest: '.tmp/styles',
           ext: '.css'
         }]
@@ -239,11 +259,11 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= config.dist %>/scripts/{,*/}*.js',
-          '<%= config.dist %>/styles/{,*/}*.css',
-          '<%= config.dist %>/images/{,*/}*.*',
-          '<%= config.dist %>/styles/fonts/{,*/}*.*',
-          '<%= config.dist %>/*.{ico,png}'
+          '<%= config.pagesdist %>/scripts/{,*/}*.js',
+          '<%= config.pagesdist %>/styles/{,*/}*.css',
+          '<%= config.pagesdist %>/images/{,*/}*.*',
+          '<%= config.pagesdist %>/styles/fonts/{,*/}*.*',
+          '<%= config.pagesdist %>/*.{ico,png}'
         ]
       }
     },
@@ -253,31 +273,53 @@ module.exports = function (grunt) {
     // additional tasks can operate on them
     useminPrepare: {
       options: {
-        dest: '<%= config.dist %>'
+        dest: '<%= config.pagesdist %>'
       },
-      html: '<%= config.dist %>/index.html'
+      html: '<%= config.pagesdist %>/index.html',
+	  dist: {
+		options: {
+		  dest: '<%= config.dist %>'
+		},
+	  }
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       options: {
         assetsDirs: [
-          '<%= config.dist %>',
-          '<%= config.dist %>/images',
-          '<%= config.dist %>/styles'
+          '<%= config.pagesdist %>',
+          '<%= config.pagesdist %>/images',
+          '<%= config.pagesdist %>/styles'
         ]
       },
-      html: ['<%= config.dist %>/{,*/}*.html'],
-      css: ['<%= config.dist %>/styles/{,*/}*.css']
+      html: ['<%= config.pagesdist %>/{,*/}*.html'],
+      css: ['<%= config.pagesdist %>/styles/{,*/}*.css'],
+	  dist: {
+		options: {
+			assetsDirs: [
+			  '<%= config.pagesdist %>/images',
+			  '<%= config.pagesdist %>/styles'
+			]
+		  },
+		  css: ['<%= config.pagesdist %>/styles/{,*/}*.css'],
+	  }
     },
 
     // The following *-min tasks produce minified files in the dist folder
     imagemin: {
-      dist: {
+      pages: {
         files: [{
           expand: true,
           cwd: '<%= config.app %>/images',
-          src: '{,*/}*.{gif,jpeg,jpg,png}',
+          src: '{,*/}*.{gif,jpeg,jpg,png,PNG}',
+          dest: '<%= config.pagesdist %>/images'
+        }]
+      },
+	  dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/images',
+          src: '{,*/}*.{gif,jpeg,jpg,png,PNG}',
           dest: '<%= config.dist %>/images'
         }]
       }
@@ -290,6 +332,14 @@ module.exports = function (grunt) {
           cwd: '<%= config.app %>/images',
           src: '{,*/}*.svg',
           dest: '<%= config.dist %>/images'
+        }]
+      },
+	  pages: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/images',
+          src: '{,*/}*.svg',
+          dest: '<%= config.pagesdist %>/images'
         }]
       }
     },
@@ -310,38 +360,60 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= config.dist %>',
+          cwd: '<%= config.pagesdist %>',
           src: '{,*/}*.html',
-          dest: '<%= config.dist %>'
+          dest: '<%= config.pagesdist %>'
         }]
       }
     },
 
-    // By default, your `index.html`'s <!-- Usemin block --> will take care
-    // of minification. These next options are pre-configured if you do not
-    // wish to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= config.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= config.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    //uglify: {
-    //   dist: {
-     //    files: {
-     //      '<%= config.dist %>/scripts/main.js': [
-     //        './.tmp/scripts/{,*/}*.js',
-     //      ]
-     //    }
-    //   }
-   //  },
-    // concat: {
-    //   dist: {}
-    // },
+     /*By default, your `index.html`'s <!-- Usemin block --> will take care
+     of minification. These next options are pre-configured if you do not
+     wish to use the Usemin blocks.*/
+     cssmin: {
+       dist: {
+         files: {
+           '<%= config.dist %>/styles/golden-ui.css': [
+             '.tmp/styles/golden-ui.css',
+             //'<%= config.app %>/styles/golden-ui.css'
+           ]
+         }
+       },
+	   pages: {
+         files: {
+           '<%= config.pagesdist %>/styles/main.css': [
+             '.tmp/styles/main.css',
+             //'<%= config.app %>/styles/main.css'
+           ]
+         }
+       }
+     },
+    uglify: {
+       dist: {
+         files: {
+           '<%= config.dist %>/golden-ui.min.js': [
+             '<%= config.dist %>/golden-ui.js',
+           ]
+         }
+       },
+	   pages: {
+         files: {
+           '<%= config.pagesdist %>/scripts/main.js': [
+             './.tmp/scripts/main.js',
+           ]
+         }
+       }
+     },
+     concat: {
+       dist: {
+		  src: ['./app/scripts/*.js'],
+		  dest: '<%= config.dist %>/golden-ui.js',
+		},
+	   pages: {
+		  src: ['./app/scripts/*.js'],
+		  dest: '<%= config.pagesdist %>/app/scripts/main.js',
+		},
+     },
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -353,7 +425,27 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/{,*/}*.{png,jpg,PNG}',
+            //'images/{,*/}*.{png,jpg,PNG}',
+            //'{,*/}*.html',
+            'styles/fonts/{,*/}*.*'
+          ]
+        }/*, {
+          expand: true,
+          dot: true,
+          cwd: '.',
+          src: 'bower_components/*',
+          dest: '<%= config.dist %>'
+        }*/]
+      },
+	  pages: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= config.app %>',
+          dest: '<%= config.pagesdist %>',
+          src: [
+            '*.{ico,png,txt}',
+            'images/{,*/}*.{webm}',
             //'{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
@@ -362,7 +454,7 @@ module.exports = function (grunt) {
           dot: true,
           cwd: '.',
           src: 'bower_components/*',
-          dest: '<%= config.dist %>'
+          dest: '<%= config.pagesdist %>'
         }]
       }
     },
@@ -399,26 +491,24 @@ module.exports = function (grunt) {
 				ext: '.html'
             }]
 		},
-		dist: {
+		pages: {
 			//process: true,
 			files: [{
-				'./dist/index.html': ['./app/index.html'],
-				'./dist/bootstrap/index.html': ['./app/bootstrap/index.html'],
+				'./pages-dist/index.html': ['./app/index.html'],
+				'./pages-dist/bootstrap/index.html': ['./app/bootstrap/index.html'],
 				//'./.tmp/bootstrap/typography.html': ['./app/bootstrap/typography.html'],
-				'./dist/features/index.html': ['./app/features/index.html'],
+				'./pages-dist/features/index.html': ['./app/features/index.html'],
 			},{
-//
 				expand: true,
 				cwd: './bootstrap/',
 				src: ['*.html'],
-				dest: './dist/bootstrap/',
+				dest: './pages-dist/bootstrap/',
 				ext: '.html'
             },{
-//
 				expand: true,
 				cwd: './features/',
 				src: ['*.html'],
-				dest: './dist/features/',
+				dest: './pages-dist/features/',
 				ext: '.html'
             }]
 		},
@@ -443,9 +533,15 @@ module.exports = function (grunt) {
       ],
       dist: [
         'babel',
-        'sass',
-        'imagemin',
-        'svgmin'
+        'sass:dist',
+        'imagemin:dist',
+        'svgmin:dist'
+      ],
+	  pages: [
+        'babel',
+        'sass:pages',
+        'imagemin:pages',
+        'svgmin:pages'
       ]
     }
   });
@@ -454,7 +550,7 @@ module.exports = function (grunt) {
   grunt.registerTask('serve', 'start the server and preview your app', function (target) {
 
     if (target === 'dist') {
-      return grunt.task.run(['build', 'browserSync:dist']);
+      return grunt.task.run(['buildpages', 'browserSync:dist']);
     }
 
     grunt.task.run([
@@ -490,18 +586,33 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-	'processhtml:dist',
-    'wiredep',
-    'useminPrepare',
+	//'processhtml:dist',
+    //'wiredep',
+    //'useminPrepare:dist',
     'concurrent:dist',
     'postcss',
-    'concat',
-    'cssmin',
-    'uglify',
+    'concat:dist',
+    'cssmin:dist',
+    'uglify:dist',
     'copy:dist',
     //'filerev',
-    'usemin',
+    'usemin:dist',
     //'htmlmin'
+  ]);
+  grunt.registerTask('buildpages', [
+    'clean:pages',
+	'processhtml:pages',
+    'wiredep',
+    'useminPrepare',
+    'concurrent:pages',
+    'postcss',
+    'concat:pages',
+    'cssmin:pages',
+    'uglify:pages',
+    'copy:pages',
+    //'filerev',
+    'usemin',
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
