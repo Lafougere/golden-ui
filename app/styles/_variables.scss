@@ -1,20 +1,18 @@
 
 
-$imgPath: "../images";
-$sprite: url(../images/sprite.png);
+$imgPath: "../images" !default;
+$sprite: url(#{$imgPath}/sprite.png);
 
 
 // cursors
-$cursorHand: url(../images/cursors/cursor_hand.gif), pointer;
-$cursorClicked: url(../images/cursors/cursor_clicked.gif), pointer;
-$cursorGrey: url(../images/cursors/cursor_grey.png), not-allowed;
-$cursorBlack: url(../images/cursors/cursor_black.gif), default;
-$cursorRed: url(../images/cursors/cursor_red.gif), default;
-$cursorWhite: url(../images/cursors/cursor_white.gif), default;
-$cursorYellow: url(../images/cursors/cursor_yellow.gif), default;
-$cursorBrown: url(../images/cursors/cursor_brown.gif), default;
-
-
+$cursorHand: url(#{$imgPath}/cursors/cursor_hand.gif), pointer;
+$cursorClicked: url(#{$imgPath}/cursors/cursor_clicked.gif), pointer;
+$cursorGrey: url(#{$imgPath}/cursors/cursor_grey.png), not-allowed;
+$cursorBlack: url(#{$imgPath}/cursors/cursor_black.gif), default;
+$cursorRed: url(#{$imgPath}/cursors/cursor_red.gif), default;
+$cursorWhite: url(#{$imgPath}/cursors/cursor_white.gif), default;
+$cursorYellow: url(#{$imgPath}/cursors/cursor_yellow.gif), default;
+$cursorBrown: url(#{$imgPath}/cursors/cursor_brown.gif), default;
 
 // colors
 $deepBlue: #212033;
@@ -25,7 +23,6 @@ $mainGrey: #595652;
 $secondaryGrey: #696a6a;
 $darkGrey: #323c39;
 $lightGrey: #847e88;
-
 $red: #f95664;
 $blue: #516fe5;
 $lightBlue: #399cff;
