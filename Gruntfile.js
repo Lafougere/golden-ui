@@ -517,6 +517,12 @@ module.exports = function (grunt) {
 			process:true
 		}
 	},
+	'gh-pages': {
+		options: {
+		  base: './pages-dist'
+		},
+		src: ['*.*', 'images/**/*', 'bootstrap/*', 'features/*', 'scripts/*', 'styles/*']
+	  },
 
     // Run some tasks in parallel to speed up build process
     concurrent: {
