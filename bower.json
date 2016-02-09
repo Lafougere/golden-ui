@@ -21,7 +21,7 @@
     "Axel Glorieux <axel.glorieux@gmail.com>"
   ],
   "description": "a bootstrap compatible rpg theme",
-  "main": ["app/scripts/main.js","app/styles/main.scss"],
+  "main": ["dist/golden-ui.js","dist/styles/golden-ui.css"],
   "moduleType": [
     "globals"
   ],

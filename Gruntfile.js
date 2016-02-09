@@ -275,12 +275,8 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.pagesdist %>'
       },
-      html: '<%= config.pagesdist %>/index.html',
-	  dist: {
-		options: {
-		  dest: '<%= config.dist %>'
-		},
-	  }
+      html: '<%= config.pagesdist %>/index.html'
+
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
@@ -399,7 +395,7 @@ module.exports = function (grunt) {
 	   pages: {
          files: {
            '<%= config.pagesdist %>/scripts/main.js': [
-             './.tmp/scripts/main.js',
+             '<%= config.pagesdist %>/scripts/*.js',
            ]
          }
        }
@@ -410,8 +406,8 @@ module.exports = function (grunt) {
 		  dest: '<%= config.dist %>/golden-ui.js',
 		},
 	   pages: {
-		  src: ['./app/scripts/*.js'],
-		  dest: '<%= config.pagesdist %>/app/scripts/main.js',
+		  src: ['./.tmp/scripts/*.js'],
+		  dest: '<%= config.pagesdist %>/scripts/main.js',
 		},
      },
 
@@ -606,9 +602,9 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:pages',
     'postcss',
-    'concat:pages',
-    'cssmin:pages',
-    'uglify:pages',
+    'concat:generated',
+    'cssmin:generated',
+    'uglify:generated',
     'copy:pages',
     //'filerev',
     'usemin',
