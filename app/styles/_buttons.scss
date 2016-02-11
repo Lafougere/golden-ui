@@ -157,7 +157,7 @@ fieldset[disabled] {
     &:hover {
         background: $sprite -86px -28px no-repeat;
     }
-    &:active {
+    &:active,&.active {
         background: $sprite -86px -56px no-repeat;
         padding-top: 1px;
     }
