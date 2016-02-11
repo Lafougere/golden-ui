@@ -93,6 +93,7 @@ fieldset[disabled] {
         margin: 5px 0;
         padding: 12px 10px;
         cursor: $cursorHand;
+		text-align: center;
         &:first-child {
             background-position: -635px -426px;
             &:hover {
