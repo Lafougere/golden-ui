@@ -78,7 +78,7 @@
 		//z-index:-1;
     }
     .panel-body {
-        padding-top: 24px;
+        padding: 24px;
         text-align: left;
         clear: both;
         position: relative;
@@ -87,9 +87,10 @@
         padding: 0;
         border: 0;
         display: block;
+		width: 100%;
         padding: 0 40px;
-        position: relative;
-        top: 9px;
+        position: absolute;
+        bottom: -45px;
         margin-bottom:25px;
         background: transparent;
         &.right {
@@ -100,7 +101,7 @@
             float:left;
         }
         .btn-round {
-            top: 10px;
+            top: -10px;
             &.circled:after {
                 background: $sprite -955px -376px;
             }
@@ -261,6 +262,22 @@
             margin-bottom: -48px;
         }
     }
+	.vertical-nav {
+		position: absolute;
+		width: auto;
+		left: -18px;
+		top: 30px;
+		.btn-round {
+			display: block;
+			margin-bottom: 30px;
+			&.circled:after {
+				background: $sprite -951px -480px;
+				width: 48px;
+				height: 50px;
+				top:-12px;
+			}
+		}
+	}
     p {
         text-shadow: 2px 2px 0px #113;
     }
