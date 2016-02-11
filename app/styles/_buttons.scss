@@ -166,7 +166,7 @@ fieldset[disabled] {
         &:hover {
             background: $sprite -58px -28px no-repeat;
         }
-        &:active {
+        &:active,&.active {
             background: $sprite -58px -56px no-repeat;
         }
     }
@@ -175,7 +175,7 @@ fieldset[disabled] {
         &:hover {
             background: $sprite -114px -28px no-repeat;
         }
-        &:active {
+        &:active,&.active {
             background: $sprite -114px -56px no-repeat;
         }
     }
@@ -184,7 +184,7 @@ fieldset[disabled] {
         &:hover {
             background: $sprite -142px -28px no-repeat;
         }
-        &:active {
+        &:active,&.active {
             background: $sprite -142px -56px no-repeat;
         }
     }
